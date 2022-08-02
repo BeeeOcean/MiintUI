@@ -71,7 +71,7 @@ export const MintButton = ({
             {!candyMachine ? (
                 "CONNECTING..."
             ) : candyMachine?.state.isSoldOut || isSoldOut ? (
-                'SOLD OUT'
+                'Todos NFTs já Criados'
             ) : isActive ? (
                 isVerifying ? 'VERIFYING...' :
                     isMinting || clicked ? (

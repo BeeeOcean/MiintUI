@@ -107,7 +107,7 @@ const Wallet = styled.ul`
 const ConnectButton = styled(WalletMultiButton)`
   border-radius: 18px !important;
   padding: 6px 16px;
-  background-color: #fa26a0;
+  background-color: #ff214f;
   margin: 0 auto;
 `;
 
@@ -573,7 +573,7 @@ const Home = (props: HomeProps) => {
           } else {
             setAlertState({
               open: true,
-              message: "Mint failed! Please try again!",
+              message: "Tente Criar o NFT Novamente",
               severity: "error",
             });
             return;
@@ -631,7 +631,7 @@ const Home = (props: HomeProps) => {
         } else {
           setAlertState({
             open: true,
-            message: "Mint failed! Please try again!",
+            message: "Tente Criar o NFT Novamente",
             severity: "error",
           });
           refreshCandyMachineState();
@@ -693,8 +693,8 @@ const Home = (props: HomeProps) => {
       <MainContainer>
         <WalletContainer>
           {wallet.connected
-            ? "Wallet Connected successfully"
-            : "Please connect your wallet"}
+            ? "Carteira conectada com sucesso"
+            : "Por favor conecte sua carteira"}
         </WalletContainer>
         <br />
         <Logo>
@@ -762,7 +762,7 @@ const Home = (props: HomeProps) => {
               </Snackbar>
               <NFT elevation={3}>
                 <h2>
-                  Total Minted {itemsRedeemed} / {itemsAvailable}
+                  NFTs já Criados Minted {itemsRedeemed} / {itemsAvailable}
                 </h2>
                 {wallet &&
                   isActive &&
@@ -781,7 +781,7 @@ const Home = (props: HomeProps) => {
                           whitelistPrice +
                           " " +
                           priceLabel
-                        : "Mint Price :" + price + " " + priceLabel
+                        : "Valor Aproximado 75BRL :" + price + " " + priceLabel
                     }
                   />
                 </div>
